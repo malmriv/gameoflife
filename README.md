@@ -1,2 +1,2 @@
 # gameoflife
-A Fortran + R implementation of Conway's game of life.
+A Fortran + R implementation of [John Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life). The "board" has been with implemented periodic boundary conditions (that is, the coordinates of a lattice have been mapped onto a torus: emerging structures can't escape, they just re appear on the corresponding side of the board). Some well known structures —like gliders— can be seen in the animation!
