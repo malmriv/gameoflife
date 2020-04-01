@@ -95,7 +95,7 @@ c   module used in the program to generate random numbers.
         end function rand_xx
       end module randomnumber
 
-c THE ACTUAL PROGRAM STARTS HERE. (Explain variables here).
+c THE ACTUAL PROGRAM STARTS HERE.
 
       program conway
       use randomnumber
