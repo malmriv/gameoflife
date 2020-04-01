@@ -1,7 +1,6 @@
-c   DESCRIPTION. This is an implementation of the Ising method following
-c   the algorithm developed by Metropolis et al. (1953). The actual program
-c   starts at line 100. The preceding lines of code are a module used in the
-c   program to generate random numbers.
+c   DESCRIPTION. This is an implementation of John Conway's "Game of Life".
+c   The actual program starts at line 100. The preceding lines of code are a
+c   module used in the program to generate random numbers.
 
       module randomnumber
       integer*8::ip,iq,is,np,nbit,ic
@@ -108,7 +107,7 @@ c     Declaration of variables
       real*8 start, finish
       integer, dimension(:,:), allocatable :: cells, cells2
 
-c     Set size of lattice (nodes per side), temperature & MC steps
+c     Set size of lattice (nodes per side) and whole-grid steps.
       lattice = 128
       steps = 500
 
@@ -123,7 +122,7 @@ c     Save results onto a file for every MC step.
 c     Allocate memory
       allocate(cells(1:lattice,1:lattice))
 
-c     Fill cell array with uniform 1 and 0 values
+c     Fill cell array with random 1 and 0 values
       do i=1,lattice
         do j=1,lattice
           cells(i,j) = 0
